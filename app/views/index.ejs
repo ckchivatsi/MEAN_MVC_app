@@ -2,19 +2,21 @@
 <html>
 <head>
     <title><%= title %></title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <h1><%= title %></h1>
 
-    <% if ( user ) { %>
+    <% if ( user != 'Guest' ) { %>
 		<h2>Hello <%=user%> </h2>
 		<a href="/logout">Logout</a>
 	<% } else { %>
+        <h2>Hello <%=user%> </h2>
 		<a href="/register">Register</a>
 		<a href="/login">Login</a>
 	<% } %>
-
-    <img src="img/logo.jpg" alt="Hack Hands logo">
+	<br><br>
+    <img class="img-responsive" src="img/paper.jpg" alt="Hack Hands logo">
 </body>
 </html>
